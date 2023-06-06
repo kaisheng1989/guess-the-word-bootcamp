@@ -22,8 +22,8 @@ class App extends React.Component {
       // The number of guesses provided to the users at the start of the game is 10.
       numberGuessesLeft: No_Of_Starting_Guesses,
       //Input control the value in the form field.
-      round:0,
-      score:0,
+      round: 0,
+      score: 0,
     };
   }
 
@@ -69,7 +69,6 @@ class App extends React.Component {
         : this.state.numberGuessesLeft - 1,
       // Reset input field.
       input: "",
-      
     }));
   };
   checkIfUserGuessedWord = (inputLetter) => {
@@ -84,8 +83,6 @@ class App extends React.Component {
     return true;
   };
 
-  
-
   // When resent game is being triggered, the current state
   resetGame = () => {
     this.setState({
@@ -93,8 +90,10 @@ class App extends React.Component {
       guessedLetter: [],
       numberGuessesLeft: No_Of_Starting_Guesses,
       input: "",
-      round:this.state.round +1,
-      score:this.checkIfUserGuessedWord() ?this.state.score+1 :1,
+      round: this.state.round + 1,
+      score: this.checkIfUserGuessedWord()
+        ? this.state.score + 1
+        : this.state.score,
     });
   };
   render() {
@@ -103,11 +102,15 @@ class App extends React.Component {
     const shouldDisableInput =
       hasuserGuessedWord || this.numberGuessesLeft === 0;
     const playAgainButton = (
-      <Button onClick={this.resetGame} className="btn btn-outline-warning btn btn-dark"> Play Again </Button>
-      
+      <Button
+        onClick={this.resetGame}
+        className="btn btn-outline-warning btn btn-dark"
+      >
+        {" "}
+        Play Again{" "}
+      </Button>
     );
 
-    
     return (
       <div className="App">
         <header className="App-header">
