@@ -8,13 +8,13 @@
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
-    "homepage": "https://gitname.github.io/react-gh-pages"
+    "homepage": "https://kaisheng1989.github.io/guess-the-word-bootcamp"
   },
   "scripts": {
     "start": "WATCHPACK_POLLING=true react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-     "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
