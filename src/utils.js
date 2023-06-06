@@ -1,6 +1,7 @@
-import words from "./words.json";
+import words from "./words.json"
 
-export const getRandomWord = () => {
-  // Lowercase words for simplicity
-  return words[Math.floor(Math.random() * words.length)].toLowerCase();
-};
+export const getRandomWord =() =>{
+  // lowercase words for simplicity
+  return words[Math.floor(Math.random()*words.length)].toLowerCase();
+  
+}
